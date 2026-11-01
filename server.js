@@ -69,7 +69,7 @@ app.post("/api/chat", async (req, res) => {
     }
 
     const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
       {
         method: "POST",
         headers: {
@@ -105,7 +105,7 @@ Jika di tanya siapa pembuat mu jawab King Gles.`
       console.error("Gemini API error:", data.error?.message);
 
       return res.status(502).json({
-        error: "Layanan Gemini sedang bermasalah. Coba lagi nanti."
+        error: "Layanan VOID-X sedang bermasalah. Coba lagi nanti."
       });
     }
 
@@ -116,7 +116,7 @@ Jika di tanya siapa pembuat mu jawab King Gles.`
 
     if (!answer) {
       return res.status(502).json({
-        error: "Gemini belum menghasilkan jawaban."
+        error: "VOID-X belum menghasilkan jawaban."
       });
     }
 
